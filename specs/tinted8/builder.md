@@ -53,9 +53,9 @@ Examples:
 
 For every `palette.{{token_name}}`, if the color is missing, the builder generates:
 
-- `normal` - The color as provided (e.g. `red.normal`)
-- `bright` - A lighter variant (e.g. `cyan.bright`)
-- `dim` - A darker variant (e.g `green.dim`)
+- `normal` - The color as provided (e.g. `palette.red.normal`)
+- `bright` - A lighter variant (e.g. `palette.cyan.bright`)
+- `dim` - A darker variant (e.g `palette.green.dim`)
 
 If the scheme provides `palette.{{color_name}}.bright` or
 `palette.{{color_name}}.dim` color variants, builders must not override them
@@ -76,13 +76,13 @@ is derived using the formulas below:
 Each produced value is exposed as with color sub-components:
 
 ```
-{{token-name}}-{{variant}}-{{sub-component}}
+palette.{{token-name}}-{{variant}}-{{sub-component}}
 ```
 
 ```
-blue.bright.hex  → "7cafc2"
-red.normal.rgb.r → "124"
-green.dim.dec.b  → "0.76"
+palette.blue.bright.hex  → "7cafc2"
+palette.red.normal.rgb.r → "124"
+palette.green.dim.dec.b  → "0.76"
 ```
 
 ## Color Formulas
@@ -436,8 +436,8 @@ default:
   filename: "output/{{ scheme.system }}-{{ scheme.slug }}.ext"
   supported-systems: [tinted8]
   supports:
-    tinted8-styling: ">=0.1.0"
-    tinted8-builder: ">=0.1.0"
+    tinted8-styling: ">=0.2.0"
+    tinted8-builder: ">=0.2.0"
 ```
 
 This defines which versions of the Tinted8 Styling and Builder specifications
@@ -629,7 +629,6 @@ consistent choice.
 
 ## References
 
-- Tinted8 Styling Specification v0.1.0-draft
 - Mustache Template Language Specification
 
 _SPEC END_

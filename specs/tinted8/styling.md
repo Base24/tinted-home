@@ -33,7 +33,7 @@ A Tinted8 scheme is stored as a YAML document with the following fields:
 | Property                       | Required | Default | Description |
 | ------------------------------ | -------- | ------- | ----------- |
 | `scheme.system`                | Yes | - | Identifies the scheme system. For Tinted8 schemes this value must be `tinted8`. |
-| `scheme.supports.styling-spec` | Yes | - | Styling spec version implemented by the scheme (e.g. `0.1.0`). |
+| `scheme.supports.styling-spec` | Yes | - | Styling spec version implemented by the scheme (e.g. `0.2.0`). |
 | `scheme.author`                | Yes | - | The person or organization that created this scheme. |
 | `scheme.theme-author`          | No  | `scheme.author` | Attribution for the original or inspirational theme. |
 | `scheme.description`           | No  | - | Short human-readable summary. |
